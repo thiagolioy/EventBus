@@ -12,7 +12,7 @@ open class Listener<T: Event> {
     public var identifier: String {
         return String(describing: self)
     }
-    public func handle(event: T) {}
+    open func handle(event: T) {}
 }
 
 extension Listener: Hashable {
