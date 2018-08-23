@@ -9,10 +9,10 @@
 import Foundation
 
 public class Listener<T: Event> {
-    var identifier: String {
+    public var identifier: String {
         return String(describing: self)
     }
-    func handle(event: T) {}
+    public func handle(event: T) {}
 }
 
 extension Listener: Hashable {
