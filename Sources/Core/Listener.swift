@@ -12,6 +12,9 @@ open class Listener<T: Event> {
     public var identifier: String {
         return String(describing: self)
     }
+    
+    public init() {}
+    
     open func handle(event: T) {}
 }
 
