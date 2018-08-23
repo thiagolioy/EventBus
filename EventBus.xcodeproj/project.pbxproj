@@ -33,6 +33,18 @@
 		35B742371F82A61E00829B21 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B742381F82A62900829B21 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742341F82A61D00829B21 /* Nimble.framework */; };
 		35B742391F82A62900829B21 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; };
+		99154E95212E598200484320 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E94212E598200484320 /* Listener.swift */; };
+		99154E96212E598200484320 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E94212E598200484320 /* Listener.swift */; };
+		99154E97212E598200484320 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E94212E598200484320 /* Listener.swift */; };
+		99154E98212E598200484320 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E94212E598200484320 /* Listener.swift */; };
+		99154E9A212E599500484320 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E99212E599500484320 /* Event.swift */; };
+		99154E9B212E599500484320 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E99212E599500484320 /* Event.swift */; };
+		99154E9C212E599500484320 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E99212E599500484320 /* Event.swift */; };
+		99154E9D212E599500484320 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E99212E599500484320 /* Event.swift */; };
+		99154E9F212E59D300484320 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E9E212E59D300484320 /* WeakBox.swift */; };
+		99154EA0212E59D300484320 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E9E212E59D300484320 /* WeakBox.swift */; };
+		99154EA1212E59D300484320 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E9E212E59D300484320 /* WeakBox.swift */; };
+		99154EA2212E59D300484320 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99154E9E212E59D300484320 /* WeakBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +131,9 @@
 		35B7422E1F82A5E000829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		35B742341F82A61D00829B21 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		35B742351F82A61E00829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		99154E94212E598200484320 /* Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
+		99154E99212E599500484320 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		99154E9E212E59D300484320 /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +276,9 @@
 			isa = PBXGroup;
 			children = (
 				359649021FB18CBF00FC7ADC /* EventBus.swift */,
+				99154E94212E598200484320 /* Listener.swift */,
+				99154E99212E599500484320 /* Event.swift */,
+				99154E9E212E59D300484320 /* WeakBox.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -560,6 +578,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				359649031FB18CC000FC7ADC /* EventBus.swift in Sources */,
+				99154E9F212E59D300484320 /* WeakBox.swift in Sources */,
+				99154E9A212E599500484320 /* Event.swift in Sources */,
+				99154E95212E598200484320 /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +589,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				359649061FB18CC000FC7ADC /* EventBus.swift in Sources */,
+				99154EA2212E59D300484320 /* WeakBox.swift in Sources */,
+				99154E9D212E599500484320 /* Event.swift in Sources */,
+				99154E98212E598200484320 /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +600,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				359649041FB18CC000FC7ADC /* EventBus.swift in Sources */,
+				99154EA0212E59D300484320 /* WeakBox.swift in Sources */,
+				99154E9B212E599500484320 /* Event.swift in Sources */,
+				99154E96212E598200484320 /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +611,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				359649051FB18CC000FC7ADC /* EventBus.swift in Sources */,
+				99154EA1212E59D300484320 /* WeakBox.swift in Sources */,
+				99154E9C212E599500484320 /* Event.swift in Sources */,
+				99154E97212E598200484320 /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

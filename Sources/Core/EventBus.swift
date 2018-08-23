@@ -8,8 +8,43 @@
 
 import Foundation
 
-class EventBus {
+public class EventBus {
+    static let shared = EventBus()
+    private var weakListeners: [WeakBox<AnyObject>] = []
     
-    static let name = "EventBus"
+    private init() {}
     
+    public func add<T: Event>(listener: Listener<T>) {
+        cleanDeallocatedListeners()
+        guard !contains(listener) else {
+            fatalError("This listener was already added")
+        }
+        weakListeners.append(WeakBox(listener))
+    }
+    
+    public func emit<T: Event>(event: T) {
+        cleanDeallocatedListeners()
+        let list = weakListeners
+            .compactMap({ $0.value as? Listener<T> })
+        
+        if list.isEmpty {
+            fatalError("There is no listener for this event")
+        }
+        
+        list.first?.handle(event: event)
+    }
 }
+
+fileprivate extension EventBus {
+    
+    fileprivate func cleanDeallocatedListeners() {
+        weakListeners = weakListeners.filter({ $0.value != nil })
+    }
+    
+    fileprivate func contains<T: Event>(_ listener: Listener<T>) -> Bool {
+        return weakListeners
+            .compactMap({ $0.value as? Listener<T> })
+            .contains(listener)
+    }
+}
+
