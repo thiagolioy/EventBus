@@ -9,7 +9,7 @@
 import Foundation
 
 public class EventBus {
-    static let shared = EventBus()
+    public static let shared = EventBus()
     private var weakListeners: [WeakBox<AnyObject>] = []
     
     private init() {}
