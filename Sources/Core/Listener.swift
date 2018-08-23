@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Listener<T: Event> {
+open class Listener<T: Event> {
     public var identifier: String {
         return String(describing: self)
     }
