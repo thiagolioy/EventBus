@@ -33,6 +33,10 @@ public class EventBus {
         
         list.first?.handle(event: event)
     }
+    
+    public func removeAllListeners() {
+        weakListeners = []
+    }
 }
 
 fileprivate extension EventBus {

@@ -19,8 +19,10 @@ class EventBusSpec: QuickSpec {
             
             var sut: EventBus!
             
+            
             beforeEach {
                 sut = EventBus.shared
+                sut.removeAllListeners()
             }
             
             it("should be able to add a listener and emit a event") {
@@ -67,9 +69,12 @@ class EventBusSpec: QuickSpec {
             }
 
             it("should deallocate memory properly") {
-                weak var coord = FakeCoordinator()
-                if let c = coord {
-                    sut.add(listener: c)
+                weak var coord: FakeCoordinator?
+                do {
+                    coord = FakeCoordinator()
+                    if let c = coord {
+                        sut.add(listener: c)
+                    }
                 }
                 
                 coord = nil
